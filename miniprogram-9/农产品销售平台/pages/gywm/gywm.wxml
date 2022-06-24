@@ -1,0 +1,4 @@
+<!--pages/gywm/gywm.wxml-->
+<view class="dd">
+  <rich-text class="rich"nodes="{{msgList[0].gywm}}" ></rich-text>
+</view>

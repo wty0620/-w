@@ -1,0 +1,9 @@
+<!--pages/yjfk/yjfk.wxml-->
+<view class="yjfk">
+    <view class="yjfk-title">意见反馈：  </view>
+    <button open-type="feedback" type="primary" style="margin-top:50rpx">意见反馈</button>
+    <button open-type="contact" type="default" style="margin-top:50rpx">联系客服</button>
+</view>
+<view class="text-01">
+    您的意见是我们不断改进的动力，请留下您在使用过程中遇到的问题或提出宝贵 建议! 
+</view>

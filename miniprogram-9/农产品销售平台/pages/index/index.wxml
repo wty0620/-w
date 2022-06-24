@@ -1,0 +1,52 @@
+<view class="banner">
+    <swiper class="swip_main" autoplay="true" circular="true" interval="6000" indicator-dots="true">
+        <block wx:for="{{mgList}}">
+            <swiper-item >
+                <image style="width: 100%;height: 100%;" mode="scaleToFill" src="{{item.photo}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="tz">
+    <swiper class="swiper-news-top" vertical="true" autoplay="true" circular="true" interval="3000">
+        <block wx:for="{{ti}}" >
+                <swiper-item>
+                    <view class="swiper_item" >{{item.title }}</view>
+                </swiper-item>
+          
+        </block>
+    </swiper>
+</view>
+
+
+<view class="content">
+    <view class="item">
+        <view>不知道有啥推荐点这里</view>
+        <view>👇</view>
+        <button bindtap="aaa" size="mini" type="primary">攻略</button>
+    </view>
+</view>
+
+<view class="rmbs">
+    <view class="rmbs-title">
+        <view class="rmbs-title-text">热门农产品</view>
+        <view class="rmbs-title-more" bindtap='showlist'>查看更多 ></view>
+    </view>
+    <view class="rmbs-list" wx:for="{{rmbs}}" wx:for-item="item" wx:key="_id"  bindtap='showbs' id="{{item._id}}" wx:if="{{index<10}}">
+        <view class="rmbs-list-photo">
+            <image src="{{item.src}}"></image>
+        </view>
+        <view class="rmbs-list-text">
+            <view class="rmbs-list-text-tit1">{{item.name}}</view>
+            <view class="rmbs-list-text-jj">{{item.jj}}</view>
+            <view class="rmbs-list-text-tit2">地址：{{item.zd}}</view>
+            <view class="rmbs-list-text-tit3">
+                <view class="rmbs-list-text-btn" style="background-color: rgb(26, 69, 134);">{{item.btn1}}</view>
+                <view class="rmbs-list-text-btn" style="background-color: rgb(24, 122, 29);">{{item.btn2}}</view>
+                <view class="rmbs-list-text-btn" style="background-color: coral;">{{item.btn3}}</view>
+                <view class="rmbs-list-text-btn">{{item.btn4}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
